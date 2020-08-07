@@ -1,17 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>staff packge control trip</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>trip control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>staff packaging control trip</h1>
-    </body>
-</html>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+   <h1 class="display-2 text-center "> staff control trip </h1>
+
+           <div class="row align-items-center">
+          <div class="col-12 col-md-6 col-size">
+            <div class="container border border-light rounded p-4 col-size">
+              <h5>Create an account:</h5>
+              <form id="sign-up">
+                <div class="form-group">
+                  <label for="email">Email address: </label>
+                  <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password: </label>
+                  <input type="password" id="password" class="form-control p-4" placeholder="password"
+                    name="credentials[password]">
+                </div>
+                <div class="form-group">
+                  <label for="password_confirmation"> Confirm Password: </label>
+                  <input type="password" id="password_confirmation" class="form-control p-4"
+                    placeholder="confirm password" name="credentials[password_confirmation]">
+                </div>
+                <button type="submit" class="btn btn-info btn-create-account p-3"> Create Account </button>
+              </form>
+              <div class="create-account-message pt-4"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 ">
+            <div class="sign-in unauthorized my-5 container border border-light rounded p-4 col-size">
+              <form id="sign-in">
+                <h5>Login to your account:</h5>
+                <div class="form-group">
+                  <label for="email">Email address: </label>
+                  <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password: </label>
+                  <input type="password" id="password" class="form-control p-4" placeholder="password"
+                    name="credentials[password]">
+                </div>
+                <button type="submit" class="btn btn-info btn-login-account p-3"> Login </button>
+              </form>
+              <div class="sign-in-message-success mt-4"> </div>
+              <div class="sign-in-message-error mt-4"> </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="user-dashboard">
+        <div class="col-12 col-md-6 ">
+            <div class="container border border-light rounded p-4 col-size">
+          <button id="change-password-button" class="btn btn-info p-3 btn-change-password">Change Password</button>
+         <form id="change-password">
+            <h5 class="py-4">Change Password</h5>
+            <div class="form-group">
+              <label for="password"> Old Password: </label>
+              <input type="password" id="password" class="form-control p-4" placeholder="Please enter your old password"
+                name="passwords[old]">
+            </div>
+            <div class="form-group">
+              <label for="password"> New Password: </label>
+              <input type="password" id="password" class="form-control p-4" placeholder="Please enter your new password"
+                name="passwords[new]">
+            </div>
+            <button type="submit" class="btn btn-info p-3 btn-change-password"> save change</button>
+          </form>
+          <div class="change-password-message py-2"> </div>
+          <form id="sign-out">
+          <button class="signout" type="submit">Sign Out</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  </html>
