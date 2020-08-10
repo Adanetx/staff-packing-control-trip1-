@@ -7,10 +7,10 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Content-Type: application/json" \
 --header "Authorization: Bearer ${TOKEN}" \
 --data '{
-    "trips": {
+    "trip": {
+      "date": "'"${DATE}"'",
         "location": "'"${LOCATION}"'",
-        "distination": "'"${DISTINATION}"'",
-        "driverName": "'"${DRIVERNAME}"'"
+        "destination": "'"${DISTINATION}"'"
      }'
 
 echo

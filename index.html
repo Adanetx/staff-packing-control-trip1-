@@ -11,81 +11,97 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
-<body>
+  <body>
+    <div class="container h-100">
 
-   <h1 class="display-2 text-center "> staff control trip </h1>
+    <h1>staff packiing trip control</h1>
+     <!--class1 form -->
 
-           <div class="row align-items-center">
-          <div class="col-12 col-md-6 col-size">
-            <div class="container border border-light rounded p-4 col-size">
-              <h5>Create an account:</h5>
-              <form id="sign-up">
-                <div class="form-group">
-                  <label for="email">Email address: </label>
-                  <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password: </label>
-                  <input type="password" id="password" class="form-control p-4" placeholder="password"
-                    name="credentials[password]">
-                </div>
-                <div class="form-group">
-                  <label for="password_confirmation"> Confirm Password: </label>
-                  <input type="password" id="password_confirmation" class="form-control p-4"
-                    placeholder="confirm password" name="credentials[password_confirmation]">
-                </div>
-                <button type="submit" class="btn btn-info btn-create-account p-3"> Create Account </button>
-              </form>
-              <div class="create-account-message pt-4"></div>
-            </div>
-          </div>
 
-          <div class="col-12 col-md-6 ">
-            <div class="sign-in unauthorized my-5 container border border-light rounded p-4 col-size">
-              <form id="sign-in">
-                <h5>Login to your account:</h5>
-                <div class="form-group">
-                  <label for="email">Email address: </label>
-                  <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password: </label>
-                  <input type="password" id="password" class="form-control p-4" placeholder="password"
-                    name="credentials[password]">
-                </div>
-                <button type="submit" class="btn btn-info btn-login-account p-3"> Login </button>
-              </form>
-              <div class="sign-in-message-success mt-4"> </div>
-              <div class="sign-in-message-error mt-4"> </div>
-            </div>
-          </div>
-        </div>
+         <div id="class1">
+         <!--Sign Up-->
+ <button id="sign-up-button"class="form-control mx-auto btn btn-primary" style="width:150px">Sign up</button>
+           <form id="sign-up" class = "m-2">
+             <div >
+             <input name="credentials[email]" type="text" placeholder="username" />
+             <input name="credentials[password]" type="password" placeholder="password"/>
+             <input name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
+             <button class="signup">Sign Up</button>
+           </div>
+           </form>
 
-      <div class="user-dashboard">
-        <div class="col-12 col-md-6 ">
-            <div class="container border border-light rounded p-4 col-size">
-          <button id="change-password-button" class="btn btn-info p-3 btn-change-password">Change Password</button>
-         <form id="change-password">
-            <h5 class="py-4">Change Password</h5>
-            <div class="form-group">
-              <label for="password"> Old Password: </label>
-              <input type="password" id="password" class="form-control p-4" placeholder="Please enter your old password"
-                name="passwords[old]">
-            </div>
-            <div class="form-group">
-              <label for="password"> New Password: </label>
-              <input type="password" id="password" class="form-control p-4" placeholder="Please enter your new password"
-                name="passwords[new]">
-            </div>
-            <button type="submit" class="btn btn-info p-3 btn-change-password"> save change</button>
-          </form>
-          <div class="change-password-message py-2"> </div>
-          <form id="sign-out">
-          <button class="signout" type="submit">Sign Out</button>
-        </form>
-        </div>
-      </div>
-    </div>
-  </body>
 
-  </html>
+           <!--Sign In form -->
+           <div>
+           <form id="sign-in" class="m-3">
+             <div class="form-control-group">
+             <input name="credentials[email]" type="text" placeholder="email" />
+             <input name="credentials[password]" type="password" placeholder="password" />
+             <button type="submit" class="signin">Sign In</button>
+           </div>
+           </form>
+         </div>
+         <!--Display messages on the calss1 vi view-->
+         <p id="class1-message"></p>
+
+       </div>
+       <!--Authenticated-->
+       <div id="class2">
+           <!--Display messages on the class2 view-->
+           <p id="class2-message"></p>
+           <form id="sign-out">
+             <button class="signout  " type="submit">Sign Out</button>
+           </form>
+           <!--Change Password-->
+           <button id="change-password-button" class = "btn btn-warning form-control mx-auto" style="width:150px">Change Password</button>
+           <form id="change-password">
+             <input name="passwords[old]" type="password" placeholder="old password" />
+             <input name="passwords[new]" type="password" placeholder="new password" />
+             <button class="changepw" type="submit">Change Password</button>
+           </form>
+           <!--Sign Out-->
+           <!-- <form id="sign-out">
+             <button class="signout" type="submit">Sign Out</button>
+           </form> -->
+
+
+
+                    <!-- <div class="m-2"> -->
+                <form id="create-trips">
+                <input placeholder="date"  name="trip[date]" type="Date" />
+                <input placeholder="driver name"  name="trip[driver]" type="text" />
+                <input placeholder="location"  name="trip[location]" type="text" />
+                <input placeholder="destinaton"  name="trip[destinaton]" type="text" />
+                 <button type="submit" class="btn btn-info createTrip mb-1 mt-1 btn-change-password">create trip</button>
+                </form>
+                    <!-- </div> -->
+
+
+                      <!-- <div class="m-2"> -->
+                    <form id="update-trip">
+                    <input placeholder="date"  name="trip[date]" type="Date" />
+                    <!-- <input placeholder="driver name"  name="drive name" type="text" /> </br> -->
+                    <input placeholder="location"  name="trip[location]" type="text" />
+                    <input placeholder="destinaton"  name="trip[destinaton]" type="text" />
+                      <button type="submit" class="btn btn-info updateTripe mt-1 mb-1 btn-change-password">update trip</button>
+                       </form>
+                   <!-- </div> -->
+
+                         <!-- <div class="m-2"> -->
+                      <form id="show-trip">
+                     <input name="trip[_id]" type="text" placeholder="sigle-trip" />
+                     <button type="submit" class="showTrip btn btn-info">show trip</button>
+                      </form>
+
+                      <form id="show-trips">
+                      <button type="submit" class="btn btn-info index  p-1 btn-change-password">show trips</button>
+                      </form>
+
+                      <!-- </div> -->
+                      <div id="content" class="content"></div>
+                      <div id="failure-message"></div>
+                      <div id="deleteSuccess"></div>
+                    </div>
+                  </div>
+              </body>
+              </html>

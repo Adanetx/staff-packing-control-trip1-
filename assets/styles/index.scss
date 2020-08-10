@@ -1,1 +1,33 @@
 @import '~bootstrap/scss/bootstrap';
+
+$body-bg-color: rgb(153, 102, 153);
+$border-color: $green;
+$font-color: $light;
+$index-color: #a2cbb6;
+$border-color: #000;
+$alt-color: $red;
+
+
+
+nav {
+  background-color: $index-color;
+  display: flex;
+  // display: flex;
+  // flex-direction: row;
+  height: 50px;
+  justify-content: flex-end;
+  margin-left: auto;
+
+ }
+
+body {
+  background-color: $body-bg-color;
+}
+
+h1 {
+  text-align: center;
+}
+
+box1 {
+  text-align: center;
+}

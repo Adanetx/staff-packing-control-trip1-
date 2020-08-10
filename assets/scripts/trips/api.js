@@ -1,9 +1,10 @@
 'use strict'
+// get access to the resource you're making requests to
+const config = require('../config.js')
 
-const config = require('../config')
-const store = require('../store')
+const store = require('../store.js')
 
-const SignUp = function (formData) {
+const signUp = function (formData) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -11,8 +12,7 @@ const SignUp = function (formData) {
   })
 }
 
-const SignIn = function (formData) {
-  console.log(formData)
+const signIn = function (formData) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
@@ -20,7 +20,7 @@ const SignIn = function (formData) {
   })
 }
 
-const ChangePassword = function (formData) {
+const changep= function (formData) {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -31,7 +31,7 @@ const ChangePassword = function (formData) {
   })
 }
 
-const SignOut = function () {
+const signOut = function () {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -42,8 +42,8 @@ const SignOut = function () {
 }
 
 module.exports = {
-  SignUp,
-  SignIn,
-  ChangePassword,
-  SignOut
+  signUp,
+  signIn,
+  changePw,
+  signOut
 }

@@ -9,7 +9,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "trip": {
       "location": "'"${LOCATION}"'",
-      "distination": "'"${DISTINATION}"'",
+      "destination": "'"${DISTINATION}"'",
       "driverName": "'"${DRIVERNAME}"'",
       "date": "'"${DATE}"'"
     }
