@@ -1,49 +1,67 @@
 'use strict'
-// get access to the resource you're making requests to
+
 const config = require('../config.js')
 
 const store = require('../store.js')
 
-const signUp = function (formData) {
-  return $.ajax({
-    url: config.apiUrl + '/sign-up',
-    method: 'POST',
-    data: formData
-  })
-}
-
-const signIn = function (formData) {
-  return $.ajax({
-    url: config.apiUrl + '/sign-in',
-    method: 'POST',
-    data: formData
-  })
-}
-
-const changep= function (formData) {
+const showTrips = function () {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/change-password',
+    url: config.apiUrl + '/trips',
+    method: 'GET'
+  })
+}
+
+const createTrip = function (formData) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/trips',
+    method: 'POST',
+    data: formData
+  })
+}
+
+const deleteTrip = function (tripId) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/trips/' + tripId,
+    method: 'DELETE'
+  })
+}
+
+const updateTrip = function (formData) {
+  const tripId = formData.trip._id
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/trips/' + tripId,
     method: 'PATCH',
     data: formData
   })
 }
 
-const signOut = function () {
+const showSingleTrip = function (req) {
+  const tripId = req.tri._id
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/sign-out',
-    method: 'DELETE'
+    url: config.apiUrl + '/trips/' + tripId,
+    method: 'GET'
   })
 }
 
 module.exports = {
-  signUp,
-  signIn,
-  changePw,
-  signOut
+  showTrips,
+  createTrip,
+  deleteTrip,
+  updateTrip,
+  showSingleTrip
 }
