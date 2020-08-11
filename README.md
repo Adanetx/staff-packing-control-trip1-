@@ -20,7 +20,7 @@ the  the variables I need for now are
 4.    destination of the staff meand where to packed
 
 ## important link
-[back end](https://adanetx.github.io/staff-packing-control-trip-/)
+[back end](https://github.com/Adanetx/staff-packing-control-trip-)
 
 # user stories
 
