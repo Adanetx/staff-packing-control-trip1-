@@ -47,6 +47,14 @@ const onShowSingleTrip = function (event) {
     .then(ui.showSingleTripSuccess)
     .catch(ui.showSingleTripFailed)
 }
+const onShowCreatForm = function (event) {
+  event.preventDefault()
+  $('#create-trips').show()
+}
+const onShowUpdateForm = function (event) {
+  event.preventDefault()
+  $('#update-trip').show()
+}
 
 const addHandlers = () => {
   $('#show-trips').on('click', onShowTrips)
@@ -54,8 +62,9 @@ const addHandlers = () => {
   $('#content').on('click', '.btn-danger', onDeleteTrip)
   $('#update-trip').on('submit', onUpdateTrip)
   $('#show-trip').on('submit', onShowSingleTrip)
+  $('.opencreation').on('click', onShowCreatForm)
+  $('.show-update-form').on('click', onShowUpdateForm)
 }
-
 module.exports = {
   addHandlers
 }

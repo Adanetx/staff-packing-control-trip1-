@@ -10,9 +10,9 @@ const showTripsSuccess = function (response) {
   store.user = response.user
   $('#faillure-message').hide()
   $('#content').show()
-  $('#deleteSuccess').hide()
+  $('#deleteSuccess').show()
   const showTripText = showTripTemplate({ Trips: response.Tripss })
-  $('#content').html(showTripText)
+  $('#content').text(showTripText)
 }
 
 const showTripFailed = function (error) {
@@ -27,6 +27,7 @@ const createTripSuccess = function (response) {
   $('#content').show()
   const showTripsText = createTripTemplate({ trip: response.trip })
   $('#content').html(showTripsText)
+  $('form').trigger('reset')
 }
 
 const createTripFailed = function (error) {
