@@ -28,7 +28,7 @@ const signInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-out').show()
   $('#first-button').show()
-  $('.show-update-form').show()
+  $('.shower').show()
   $('.opencreation').show()
   $('#change-password-button').hide()
   $('#content').hide()
@@ -61,10 +61,18 @@ const changePassWordFailed = function (error) {
 
 const signOutSuccess = function () {
   store.user = null
+  $('#second-button').show()
+  $('.opencreation').hide()
+  $('.show-update-form').hide()
+  $('#sign-in').show()
+  $('#create-trips').hide()
+  $('#show-trips').hide()
+  $('#show-trip').hide()
+  $('#content').hide()
+  $('#failure-message').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#sign-in').show()
-  $('.show-update-form').hide()
+  $('.shower').hide()
   $('.opencreation').hide()
   $('#first-button').hide()
   $('#class2-message').hide()
@@ -75,6 +83,7 @@ const signOutSuccess = function () {
 
 const signOutFailed = function (error) {
   $('#class1-message').text('Failed to sign out!')
+  $('#class2')
   console.log(error)
 }
 

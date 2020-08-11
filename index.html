@@ -13,15 +13,23 @@
 
   <body>
     <div class="container h-100">
+      <nav>
+          <form id="sign-out">
+          <button class="signout  " type="submit">Sign Out</button>
+         </form>
+         <button id="first-button">change-password</button>
+      </nav>
 
-    <h1>staff packiing trip control</h1>
+    <p>staff packing trip control</p>
      <!--class1 form -->
 
-
+<!--  -->
          <div id="class1">
          <!--Sign Up-->
+
  <button id="second-button"class="form-control mx-auto btn btn-primary" style="width:150px">Sign up</button>
-           <form id="sign-up" class = "m-2">
+            <form id="sign-up" class = "m-2">
+           <!-- <form id = "sign-up" clss = "m-2"> -->
              <div >
              <input name="credentials[email]" type="text" placeholder="username" />
              <input name="credentials[password]" type="password" placeholder="password"/>
@@ -49,13 +57,14 @@
        <!-- <div id="class2"> -->
            <!--Display messages on the class2 view-->
            <p id="class2-message"></p>
-           <form id="sign-out">
+           <!-- <form id="sign-out">
              <button class="signout  " type="submit">Sign Out</button>
-           </form>
+             </form> -->
+
            <!--Change Password-->
 
 
-  <button id="first-button" class = "btn btn-warning form-control mx-auto m-2" style="width:200px">change-password</button>
+  <!-- <button id="first-button" class = "btn btn-warning form-control mx-auto m-2" style="width:200px">change-password</button> -->
 
            <form id="change-password">
              <input name="passwords[old]" type="password" placeholder="old password" />
@@ -70,7 +79,7 @@
 
 
            <button type="button" class="btn btn-success opencreation m-1">create</button>
-           <button type="button" class="btn btn-success show-update-form m-1">update</button>
+           <button type="button" class="btn btn-success shower m-1">update</button>
                     <!-- <div class="m-2"> -->
                   <div id="class2">
                 <form id="create-trips">
@@ -84,6 +93,8 @@
 
 
                       <!-- <div class="m-2"> -->
+                      <div id="xs">
+
                     <form id="update-trip">
                     <input placeholder="date"  name="trip[date]" type="Date" />
                     <!-- <input placeholder="driver name"  name="drive name" type="text" /> </br> -->
@@ -94,15 +105,15 @@
                    <!-- </div> -->
 
                          <!-- <div class="m-2"> -->
-                      <form id="show-trip">
-                     <input name="trip[_id]" type="text" placeholder="sigle-trip" />
+                    <form id="show-trip">
+                     <input name="trip[_id]" type="tchangeext" placeholder="sigle-trip" />
                      <button type="submit" class="showTrip btn btn-info">show trip</button>
                       </form>
 
                       <form id="show-trips">
                       <button type="submit" class="btn btn-info index  p-1 ">show trips</button>
                       </form>
-
+                    </div>
                       <div id="content" class="content"></div>
                       <div id="failure-message"></div>
                       <div id="deleteSuccess"></div>

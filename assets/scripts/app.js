@@ -8,12 +8,13 @@ $(() => {
   $('#deleteSuccess').hide()
 
   // $('#failire-message').hide(
-  $('#content').hide()
+  $('#xs').hide()
+  $('#content').show()
   $('#show-trip').hide()
   $('#create-trips').hide()
   $('#sign-out').hide()
   $('#change-password').hide()
-  $('.show-update-form').hide()
+  $('.shower').hide()
   $('.opencreation').hide()
   $('#sign-up').hide()
   $('#first-button').hide()

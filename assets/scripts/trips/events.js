@@ -53,7 +53,7 @@ const onShowCreatForm = function (event) {
 }
 const onShowUpdateForm = function (event) {
   event.preventDefault()
-  $('#update-trip').show()
+  $('#xs').show()
 }
 
 const addHandlers = () => {
@@ -63,7 +63,7 @@ const addHandlers = () => {
   $('#update-trip').on('submit', onUpdateTrip)
   $('#show-trip').on('submit', onShowSingleTrip)
   $('.opencreation').on('click', onShowCreatForm)
-  $('.show-update-form').on('click', onShowUpdateForm)
+  $('.shower').on('click', onShowUpdateForm)
 }
 module.exports = {
   addHandlers
