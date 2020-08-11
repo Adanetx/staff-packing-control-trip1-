@@ -49,6 +49,13 @@ const signInFailed = function (error) {
 }
 
 const changePasswordSuccess = function () {
+  ('#class2-message').hide()
+  $('.shower').hide()
+  $('.opencreation').hide()
+  $('#first-button').hide()
+  $('#content').show()
+  $('#show-trip').hide()
+  $('#create-trips').hide()
   $('#class2-message').show()
   $('#class2-message').text('You changed your password!')
 }

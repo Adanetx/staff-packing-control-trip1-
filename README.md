@@ -66,7 +66,7 @@ the  the variables I need for now are
 3.  create api functions
 4. creating user interface functions (ui functions)
 5. create event
-6.  handlers
+6.  creating handlers
 
 ## features for next to be solved are
 
