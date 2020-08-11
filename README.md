@@ -31,7 +31,7 @@ the  the variables I need for now are
 5. as a user I need to put my destination
 6. as a user I need to plan mean write when the the staff should stored
 7. as a user I need to insert another location.
-8. as auser I nee to add more trip, to store
+8. as auser I need to add more trip, to store
 9. as a user I need to change the location of the of the staff from where it should pick
 10. as user I need to know where to pack this staff, If the market is Austin I can take it to Austin, from where ever it located.
 11. as user cancle the trip
@@ -54,6 +54,10 @@ the  the variables I need for now are
 - MongoDataBases
 - Mongoose
 - Authenitcated and game api
+- command lines
+- github
+- git
+
 
 ## step used for this program are
 
