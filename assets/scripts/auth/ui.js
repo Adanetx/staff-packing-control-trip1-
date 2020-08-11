@@ -24,6 +24,7 @@ const signUpFailed = function (error) {
 const signInSuccess = function (response) {
   console.log(response)
   store.user = response.user
+  $('#sign-up').hide()
   $('#second-button').hide()
   $('#sign-in').hide()
   $('#sign-out').show()
@@ -68,6 +69,7 @@ const changePassWordFailed = function (error) {
 
 const signOutSuccess = function () {
   store.user = null
+  $('#class2').hide()
   $('#second-button').show()
   $('.opencreation').hide()
   $('.show-update-form').hide()
