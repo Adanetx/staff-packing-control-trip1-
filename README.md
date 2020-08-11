@@ -22,15 +22,18 @@ the  the variables I need for now are
 # user stories
 
 1. as user I need to sign
-2. sign in to take staff
+2. sign-out
 3. change password
-4. as user I need to put my when I should take the staff
-5. as a user I need to write my staff location
+4. as user I need to put my location
+5. as a user I need to put my destination
 6. as a user I need to plan mean write when the the staff should stored
-7. as a user I need to insert where the staff should stored
+7. as a user I need to insert another location.
 8. as auser I nee to add more trip, to store
 9. as a user I need to change the location of the of the staff from where it should pick
 10. as user I need to know where to pack this staff, If the market is Austin I can take it to Austin, from where ever it located.
+11. as user cancle the trip
+12. update the trip
+13. 
 
 
 # Techinologie used for the programming are
