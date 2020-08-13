@@ -48,7 +48,7 @@ const updateTrip = function (formData) {
 }
 
 const showSingleTrip = function (req) {
-  const tripId = req.tri._id
+  const tripId = req.trip._id
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
