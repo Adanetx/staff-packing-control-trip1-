@@ -1,17 +1,16 @@
 {{#each trips as |trip|}}
   {{log trip}}
   <section data-id="{{trip._id}}">
-    <h4>Trip:</h4>
-    <!-- <h5>trip ID:</h5>
-    <p id="tripId">{{trip._id}}</p> -->
-    <h5> Date :</h5>
+    <h5>Trip:</h5>
+    <h6>trip Id:</h6>
+    <p id=tripId>{{trip._id}}</p>
     <p id="tripDate">{{trip.date}}</p>
-    <h5>driver Name:</h5>
-    <p id="driverNane">{{trip.dirverName}}</p>
-    <h5>location:</h5>
+    <h6>driver Name:</h6>
+    <p id="driverName">{{trip.dirverName}}</p>
+    <h6>location:</h6>
     <p id="location">{{trip.location}}</p>
-    <h5>destination:</h5>
+    <h6>destination:</h6>
     <p id="destination">{{trip.destination}}</p>
-    <button type="button" class="btn btn-danger delete-trip" data-id="{{trip._id}}">delet trip</button>
+    <button type="button" class="btn btn-danger delete-trip" data-id="{{trip._id}}">delet</button>
   </section>
   {{/each}}

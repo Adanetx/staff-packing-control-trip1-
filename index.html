@@ -69,9 +69,9 @@
   <!-- <button id="first-button" class = "btn btn-warning form-control mx-auto m-2" style="width:200px">change-password</button> -->
 
            <form id="change-password">
-             <input name="passwords[old]" type="password" placeholder="old password" />
-             <input name="passwords[new￼]￼" type="password" placeholder="new password" />
-             <button class="changepw" type="submit">save change</button>
+             <input name="passwords[old]"  type="password" placeholder="old password" />
+             <input name="passwords[new￼]￼"  type="password" placeholder="new password" />
+             <button class="change-password" type="submit">save change</button>
            </form>
            <!--Sign Out-->
            <!-- <form id="sign-out">
@@ -86,10 +86,10 @@
                   <div id="class2">
                 <form id="create-trips">
                 <input  name="trip[date]" type="Date" placeholder="date" />
-                <input   name="trip[driver]" type="text" placeholder="driver name" />
-                <input name="trip[location]" type="text" placeholder="location" />
-                <input   name="trip[destinaton]" type="text" placeholder="destinaton"  />
-                 <button type="submit" class="btn btn-info createTrip mb-1 mt-1 btn-change-password">create trip</button>
+                <input  name="trip[driverName]" type="text" placeholder="driver name" />
+                <input  name="trip[location]"   type="text" placeholder="location" />
+                <input  name="trip[destinaton]" type="text" placeholder="destinaton"  />
+                <button type="submit" class="btn btn-info createTrip mb-1 mt-1 btn-change-password">create trip</button>
                 </form>
                     <!-- </div> -->
 
@@ -98,20 +98,20 @@
                       <div id="xs">
 
                     <form id="update-trip">
-                      <input  name="trip[_id]" type="text" placeholder="    trip ID" />
-                    <input  name="trip[date]" type="Date"  placeholder="date"/>
+                      <input  name="trip[_id]" type="text" placeholder="trip ID" />
+                      <input  name="trip[date]" type="Date"  placeholder="date"/>
                     <!-- <input placeholder="driver name"  name="drive name" type="text" /> </br> -->
 
-                    <input   name="trip[location]" type="text"  placeholder="location"/>
-                    <input  name="trip[destinaton]" type="text" placeholder="destinaton" />
-                      <button type="submit" class="btn btn-info updateTripe mt-1 mb-1 ">update trip</button>
-                       </form>
+                        <input  name="trip[location]" type="text"  placeholder="location"/>
+                        <input  name="trip[destinaton]" type="text" placeholder="destinaton" />
+                        <button type="submit" class="btn btn-info updateTripe mt-1 mb-1 ">update trip</button>
+                  </form>
                    <!-- </div> -->
 
                          <!-- <div class="m-2"> -->
                     <form id="show-trip">
-                     <input name="trip[_id]" type="text" placeholder="sigle-trip" />
-                     <button type="submit" class="showTrip btn btn-info">sigle trip</button>
+                       <input name="trip[_id]" type="text" placeholder="sigle-trip" />
+                       <button type="submit" class="showTrip btn btn-info">sigle trip</button>
                       </form>
 
                       <form id="show-trips">
@@ -123,6 +123,5 @@
                       <div id="deleteSuccess"></div>
                     </div>
                   </div>
-
-              </body>
+                </body>
               </html>

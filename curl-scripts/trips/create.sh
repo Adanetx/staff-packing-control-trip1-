@@ -8,10 +8,10 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "trip": {
-      "location": "'"${LOCATION}"'",
-      "destination": "'"${DISTINATION}"'",
+      "date": "'"${DATE}"'",
       "driverName": "'"${DRIVERNAME}"'",
-      "date": "'"${DATE}"'"
+      "location": "'"${LOCATION}"'",
+      "destination": "'"${DISTINATION}"'"
     }
   }'
 

@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const signUpSuccess = function (response) {
-  $('#second-button').hide()
+  $('#second-button').show()
   $('#sign-out').hide()
   $('#class1-message').show()
   $('#class1-message').text('Sign Up Successful! Now sign in')
@@ -41,16 +41,18 @@ const signInSuccess = function (response) {
   // $('#class1').hide()
 }
 
-const signInFailed = function (error) {
+const signInFailed = function () {
   $('#second-button').show()
+  $('#class1-message').show()
   $('#class1-message').text('Failed to Sign In')
 
-  console.log(error)
+  // console.log(error)
   $('form').trigger('reset')
 }
 
-const changePasswordSuccess = function () {
-  ('#class2-message').hide()
+const changePasswordSuccess = function (response) {
+  console.log(response)
+  $('#class1-message').hide()
   $('.shower').hide()
   $('.opencreation').hide()
   $('#first-button').hide()
@@ -58,11 +60,14 @@ const changePasswordSuccess = function () {
   $('#show-trip').hide()
   $('#create-trips').hide()
   $('#class2-message').show()
+  $('form').trigger('reset')
   $('#class2-message').text('You changed your password!')
 }
 
 const changePassWordFailed = function (error) {
-  $('#class2-message').text('Failed to changed your password!')
+  $('#class1-message').hide()
+  $('#class2-message').show()
+  $('#class2-message').text('change password fail!')
   console.log(error)
   $('form').trigger('reset')
 }

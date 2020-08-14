@@ -21,6 +21,7 @@ const SignIn = function (formData) {
 }
 
 const ChangePassword = function (formData) {
+  console.log(formData)
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
