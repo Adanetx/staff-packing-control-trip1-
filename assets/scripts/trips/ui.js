@@ -7,6 +7,7 @@ const createTripTemplate = require('../templates/showTrip.handlebars')
 const store = require('../store.js')
 
 const showTripsSuccess = function (response) {
+  console.log(response)
   store.user = response.user
   $('#faillure-message').hide()
   $('#content').show()
