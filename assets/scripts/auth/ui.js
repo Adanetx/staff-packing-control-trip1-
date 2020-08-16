@@ -3,8 +3,9 @@
 const store = require('../store.js')
 
 const signUpSuccess = function (response) {
-  $('#second-button').show()
   $('#sign-out').hide()
+  $('#second-button').show()
+
   $('#class1-message').show()
   $('#class1-message').text('Sign Up Successful! Now sign in')
   // $('#sign-up-button').hide()
@@ -15,6 +16,7 @@ const signUpSuccess = function (response) {
 }
 
 const signUpFailed = function (error) {
+  $('.sigle').hide()
   $('#class1-mesage').show()
   $('#class1-message').text('Failed to Sign Up')
   $('#sign-up-button').hide()
@@ -24,6 +26,8 @@ const signUpFailed = function (error) {
 const signInSuccess = function (response) {
   console.log(response)
   store.user = response.user
+  $('.single').show()
+  $('#show-trips').show()
   $('#sign-up').hide()
   $('#second-button').hide()
   $('#sign-in').hide()
@@ -42,6 +46,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailed = function () {
+  $('.sigle').hide()
   $('#second-button').show()
   $('#class1-message').show()
   $('#class1-message').text('Failed to Sign In')
@@ -74,6 +79,7 @@ const changePassWordFailed = function (error) {
 
 const signOutSuccess = function () {
   store.user = null
+  $('.single').hide()
   $('#class2').hide()
   $('#second-button').show()
   $('.opencreation').hide()
@@ -90,14 +96,14 @@ const signOutSuccess = function () {
   $('.opencreation').hide()
   $('#first-button').hide()
   $('#class2-message').hide()
-  $('#class2').hide()
+  // $('#class2').hide()
   $('#class1-message').show()
   $('#class1-message').text('You signed out')
 }
 
 const signOutFailed = function (error) {
   $('#class1-message').text('Failed to sign out!')
-  $('#class2')
+  $('#class2').hide()
   console.log(error)
 }
 

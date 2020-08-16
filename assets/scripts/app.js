@@ -5,10 +5,12 @@ const authEvents = require('./auth/events.js')
 const tripEvents = require('./trips/events.js')
 
 $(() => {
+  $('.single').hide()
   $('#deleteSuccess').hide()
-
+  $('#update-trip').hide()
+  $('#show-trips').hide()
   // $('#failire-message').hide(
-  $('#xs').hide()
+  // $('#xs').hide()
   $('#content').show()
   $('#show-trip').hide()
   $('#create-trips').hide()

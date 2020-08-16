@@ -34,11 +34,11 @@ const ChangePassword = function (formData) {
 
 const SignOut = function () {
   return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    },
-    url: config.apiUrl + '/sign-out',
-    method: 'DELETE'
+    }
   })
 }
 

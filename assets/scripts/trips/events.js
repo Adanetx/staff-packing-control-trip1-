@@ -25,7 +25,7 @@ const onCreateTrip = function (event) {
 
 const onDeleteTrip = function (event) {
   event.preventDefault()
-  const tripId = $(event.target).data('id')
+  const tripId = $(event.target).closest('section').data('id')
   api.deleteTrip(tripId)
     .then(ui.deleteTripSuccess)
     .catch(ui.deleteTripFailed)
@@ -51,10 +51,21 @@ const onShowSingleTrip = function (event) {
 const onShowCreatForm = function (event) {
   event.preventDefault()
   $('#create-trips').show()
+  $('#update-trip').hide()
+  $('#show-trip').hide()
+  $('#show-trips').hide()
 }
 const onShowUpdateForm = function (event) {
   event.preventDefault()
-  $('#xs').show()
+  $('#update-trip').show()
+  $('#create-trips').hide()
+  $('#show-trip').hide()
+}
+const onsingle = function (event) {
+  event.preventDefault()
+  $('#show-trip').show()
+  $('#create-trips').hide()
+  $('#update-trip').hide()
 }
 
 const addHandlers = () => {
@@ -65,6 +76,7 @@ const addHandlers = () => {
   $('#show-trip').on('submit', onShowSingleTrip)
   $('.opencreation').on('click', onShowCreatForm)
   $('.shower').on('click', onShowUpdateForm)
+  $('.single').on('click', onsingle)
 }
 module.exports = {
   addHandlers
