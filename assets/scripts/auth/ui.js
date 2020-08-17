@@ -26,6 +26,7 @@ const signUpFailed = function (error) {
 const signInSuccess = function (response) {
   console.log(response)
   store.user = response.user
+
   $('.single').show()
   $('#show-trips').show()
   $('#sign-up').hide()
@@ -79,6 +80,7 @@ const changePassWordFailed = function (error) {
 
 const signOutSuccess = function () {
   store.user = null
+  $('#update-trip').hide()
   $('.single').hide()
   $('#class2').hide()
   $('#second-button').show()

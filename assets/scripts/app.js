@@ -5,6 +5,7 @@ const authEvents = require('./auth/events.js')
 const tripEvents = require('./trips/events.js')
 
 $(() => {
+  $('#update-trip').hide()
   $('.single').hide()
   $('#deleteSuccess').hide()
   $('#update-trip').hide()

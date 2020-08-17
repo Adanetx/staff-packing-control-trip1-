@@ -9,6 +9,8 @@ const store = require('../store.js')
 const showTripsSuccess = function (response) {
   console.log(response)
   store.user = response.user
+  $('#class2-message').show()
+  $('#class2-message').text('seccessfully listed')
   $('#faillure-message').hide()
   $('#content').show()
   $('#deleteSuccess').hide()
@@ -18,17 +20,18 @@ const showTripsSuccess = function (response) {
 
 const showTripsFailed = function (error) {
   console.log(error)
-  $('#failure-message').show()
-  $('#failure-message').text('Failed to show trips. Try again')
+  $('#class2-message').show()
+  $('#class2-message').text('Failed to show trips. Try again')
 }
 
 const createTripSuccess = function (response) {
-  $('#faillure-message').hide()
   $('#create-trip').trigger('reset')
   $('#content').show()
   const showTripsText = createTripTemplate({ trip: response.trip })
   $('#content').html(showTripsText)
   $('form').trigger('reset')
+  $('#class2-message').show()
+  $('#class2-message').text('Successfully created')
 }
 
 const createTripFailed = function (error) {
@@ -39,7 +42,6 @@ const createTripFailed = function (error) {
 }
 
 const deleteTripSuccess = function () {
-  $('#failure-message').hide()
   $('#content').hide()
   $('#deleteSuccess').show()
   $('#deleteSuccess').text('trip deleted')
@@ -47,13 +49,12 @@ const deleteTripSuccess = function () {
 
 const deleteTripFailed = function (error) {
   console.log(error)
-  $('#failure-message').show()
-  $('#failure-message').text('Failed to delete trip. Try again')
+  $('#class2-message').show()
+  $('#class2-message').text('Failed to delete trip. Try again')
 }
 
 const updateTripSuccess = function (response) {
   console.log(response)
-  $('#failure-message').hide()
   $('#content').show()
   $('#class2-message').text('Trip Successfully updated!')
   $('#update-trip').trigger('reset')
@@ -62,24 +63,24 @@ const updateTripSuccess = function (response) {
 const updateTripFailed = function (error) {
   console.log(error)
   $('#update-trip').trigger('reset')
-  $('#failure-message').show()
   // $('#content').hide()
-  $('#failure-message').text('Failed to update trip. Try again')
+  $('#class2-message').show()
+  $('#class2-message').text('Failed to update trip. Try again')
 }
 
 const showSingleTripSuccess = function (response) {
-  $('#failure-message').hide()
   $('#show-trip').trigger('reset')
   $('#content').show()
   const showTripText = createTripTemplate({ trip: response.trip })
   $('#content').text(showTripText)
+  $('#class2-message').text('Successfully showed sigle trip')
 }
 
 const showSingleTripFailed = function (error) {
   console.log(error)
   $('#show-trip').trigger('reset')
-  $('#failure-message').show()
-  $('#failure-message').text('Could not show trip')
+  $('#class2-message').show()
+  $('#class2-message').text('Could not show trip')
 }
 
 module.exports = {
