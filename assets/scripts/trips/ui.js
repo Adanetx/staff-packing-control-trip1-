@@ -13,7 +13,6 @@ const showTripsSuccess = function (response) {
   $('#class2-message').text('seccessfully listed')
   $('#faillure-message').hide()
   $('#content').show()
-  $('#deleteSuccess').hide()
   const showTripsText = showTripTemplate({ trips: response.trips })
   $('#content').html(showTripsText)
 }
@@ -25,26 +24,28 @@ const showTripsFailed = function (error) {
 }
 
 const createTripSuccess = function (response) {
-  $('#create-trip').trigger('reset')
   $('#content').show()
+  $('#show-trips').show()
   const showTripsText = createTripTemplate({ trip: response.trip })
   $('#content').html(showTripsText)
-  $('form').trigger('reset')
   $('#class2-message').show()
   $('#class2-message').text('Successfully created')
+  $('form').trigger('reset')
 }
 
 const createTripFailed = function (error) {
   console.log(error)
+  $('#show-trips').show()
   $('#create-trip').trigger('reset')
-  $('#failur-message').show()
-  $('#failure-message').text('Failed to create trip. Try again')
+  $('#class2-message').show()
+  $('#class2-message').text('Failed to create trip. Try again')
 }
 
 const deleteTripSuccess = function () {
   $('#content').hide()
-  $('#deleteSuccess').show()
-  $('#deleteSuccess').text('trip deleted')
+  // $('#deleteSuccess').show()
+  $('#class2-message').show()
+  $('#class2-message').text('trip deleted')
 }
 
 const deleteTripFailed = function (error) {
@@ -55,6 +56,7 @@ const deleteTripFailed = function (error) {
 
 const updateTripSuccess = function (response) {
   console.log(response)
+  // $('#show-trips').show()
   $('#content').show()
   $('#class2-message').text('Trip Successfully updated!')
   $('#update-trip').trigger('reset')

@@ -80,6 +80,7 @@ const changePassWordFailed = function (error) {
 
 const signOutSuccess = function () {
   store.user = null
+  $('#class2-message').show()
   $('#update-trip').hide()
   $('.single').hide()
   $('#class2').hide()
