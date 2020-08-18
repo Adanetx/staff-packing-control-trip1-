@@ -65,7 +65,7 @@ const changePasswordSuccess = function (response) {
   $('.shower').show()
   $('.opencreation').show()
   $('#first-button').hide()
-  $('#content').show()
+  // $('#content').show()
   $('#show-trip').hide()
   $('#create-trips').hide()
   $('#class2-message').show()
@@ -85,6 +85,7 @@ const changePassWordFailed = function (error) {
 const signOutSuccess = function () {
   store.user = null
   // $('#xs').hide()
+  $('#update-trip').hide()
   $('#pra').show()
   $('#class2-message').show()
   $('#update-trip').hide()

@@ -15,6 +15,7 @@ const showTrips = function () {
 }
 
 const createTrip = function (formData) {
+  console.log(store.user)
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -26,6 +27,7 @@ const createTrip = function (formData) {
 }
 
 const deleteTrip = function (tripId) {
+  console.log(store.user) // add this console.lo
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -36,6 +38,7 @@ const deleteTrip = function (tripId) {
 }
 
 const updateTrip = function (formData) {
+  console.log(store.user)
   const tripId = formData.trip._id
   return $.ajax({
     headers: {

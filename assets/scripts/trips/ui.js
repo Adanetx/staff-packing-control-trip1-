@@ -7,8 +7,8 @@ const createTripTemplate = require('../templates/showTrip.handlebars')
 const store = require('../store.js')
 
 const showTripsSuccess = function (response) {
-  console.log(response)
-  store.user = response.user
+  console.log('the response is', response)
+  // store.user = response.user
   $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('seccessfully listed')
@@ -32,7 +32,7 @@ const createTripSuccess = function (response) {
   const showTripsText = createTripTemplate({ trip: response.trip })
   $('#content').html(showTripsText)
   $('#class2-message').show()
-  $('#class2-message').text('Successfully created')
+  $('#class2-message').html('Successfully created')
   $('form').trigger('reset')
 }
 
@@ -65,6 +65,7 @@ const updateTripSuccess = function (response) {
   // $('#show-trips').show()
   $('#pra').hide()
   $('#content').show()
+
   $('#class2-message').text('Trip Successfully updated!')
   $('#update-trip').trigger('reset')
 }
@@ -84,7 +85,7 @@ const showSingleTripSuccess = function (response) {
   $('#show-trip').trigger('reset')
   $('#content').show()
   const showTripText = createTripTemplate({ trip: response.trip })
-  $('#content').text(showTripText)
+  $('#content').html(showTripText)
   $('#class2-message').text('Successfully showed sigle trip')
 }
 
@@ -107,4 +108,5 @@ module.exports = {
   updateTripFailed,
   showSingleTripSuccess,
   showSingleTripFailed
+
 }
