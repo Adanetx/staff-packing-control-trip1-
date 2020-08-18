@@ -21,7 +21,9 @@ the  the variables I need for now are
 
 ## important link
 [API repo](https://github.com/Adanetx/staff-packing-control-trip-)
+
 [Deployed Application](https://adanetx.github.io/staff-packing-control-trip1-/)
+
 # user stories
 
 1. as user I need to sign
