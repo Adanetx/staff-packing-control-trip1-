@@ -9,6 +9,7 @@ const store = require('../store.js')
 const showTripsSuccess = function (response) {
   console.log(response)
   store.user = response.user
+  $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('seccessfully listed')
   $('#faillure-message').hide()
@@ -19,11 +20,13 @@ const showTripsSuccess = function (response) {
 
 const showTripsFailed = function (error) {
   console.log(error)
+  $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('Failed to show trips. Try again')
 }
 
 const createTripSuccess = function (response) {
+  $('#pra').hide()
   $('#content').show()
   $('#show-trips').show()
   const showTripsText = createTripTemplate({ trip: response.trip })
@@ -34,6 +37,7 @@ const createTripSuccess = function (response) {
 }
 
 const createTripFailed = function (error) {
+  $('#pra').hide()
   console.log(error)
   $('#show-trips').show()
   $('#create-trip').trigger('reset')
@@ -42,14 +46,16 @@ const createTripFailed = function (error) {
 }
 
 const deleteTripSuccess = function () {
+  $('#pra').hide()
   $('#content').hide()
-  // $('#deleteSuccess').show()
+  // $('#deleteSuccess').hide()
   $('#class2-message').show()
   $('#class2-message').text('trip deleted')
 }
 
 const deleteTripFailed = function (error) {
   console.log(error)
+  $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('Failed to delete trip. Try again')
 }
@@ -57,6 +63,7 @@ const deleteTripFailed = function (error) {
 const updateTripSuccess = function (response) {
   console.log(response)
   // $('#show-trips').show()
+  $('#pra').hide()
   $('#content').show()
   $('#class2-message').text('Trip Successfully updated!')
   $('#update-trip').trigger('reset')
@@ -64,13 +71,16 @@ const updateTripSuccess = function (response) {
 
 const updateTripFailed = function (error) {
   console.log(error)
+  $('#pra').hide()
   $('#update-trip').trigger('reset')
-  // $('#content').hide()
+  $('#content').hide()
   $('#class2-message').show()
   $('#class2-message').text('Failed to update trip. Try again')
 }
 
 const showSingleTripSuccess = function (response) {
+  console.log(response)
+  $('#pra').hide()
   $('#show-trip').trigger('reset')
   $('#content').show()
   const showTripText = createTripTemplate({ trip: response.trip })
@@ -80,6 +90,7 @@ const showSingleTripSuccess = function (response) {
 
 const showSingleTripFailed = function (error) {
   console.log(error)
+  $('#pra').hide()
   $('#show-trip').trigger('reset')
   $('#class2-message').show()
   $('#class2-message').text('Could not show trip')

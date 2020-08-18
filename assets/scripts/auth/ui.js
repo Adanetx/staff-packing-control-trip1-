@@ -5,6 +5,7 @@ const store = require('../store.js')
 const signUpSuccess = function (response) {
   $('#sign-out').hide()
   $('#second-button').show()
+  $('#pra').hide()
 
   $('#class1-message').show()
   $('#class1-message').text('Sign Up Successful! Now sign in')
@@ -26,7 +27,7 @@ const signUpFailed = function (error) {
 const signInSuccess = function (response) {
   console.log(response)
   store.user = response.user
-
+  $('#pra').hide()
   $('.single').show()
   $('#show-trips').show()
   $('#sign-up').hide()
@@ -58,9 +59,11 @@ const signInFailed = function () {
 
 const changePasswordSuccess = function (response) {
   console.log(response)
+  $('#change-password').hide()
+  $('#pra').hide()
   $('#class1-message').hide()
-  $('.shower').hide()
-  $('.opencreation').hide()
+  $('.shower').show()
+  $('.opencreation').show()
   $('#first-button').hide()
   $('#content').show()
   $('#show-trip').hide()
@@ -71,6 +74,7 @@ const changePasswordSuccess = function (response) {
 }
 
 const changePassWordFailed = function (error) {
+  $('#pra').hide()
   $('#class1-message').hide()
   $('#class2-message').show()
   $('#class2-message').text('change password fail!')
@@ -80,6 +84,8 @@ const changePassWordFailed = function (error) {
 
 const signOutSuccess = function () {
   store.user = null
+  // $('#xs').hide()
+  $('#pra').show()
   $('#class2-message').show()
   $('#update-trip').hide()
   $('.single').hide()
@@ -105,6 +111,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailed = function (error) {
+  $('#pra').hide()
   $('#class1-message').text('Failed to sign out!')
   $('#class2').hide()
   console.log(error)

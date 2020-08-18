@@ -25,7 +25,7 @@ const onCreateTrip = function (event) {
 
 const onDeleteTrip = function (event) {
   event.preventDefault()
-  const tripId = $(event.target).closest('section').data('id')
+  const tripId = $(event.target).data('id')
   api.deleteTrip(tripId)
     .then(ui.deleteTripSuccess)
     .catch(ui.deleteTripFailed)
