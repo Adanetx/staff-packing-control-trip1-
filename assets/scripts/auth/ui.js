@@ -59,6 +59,7 @@ const signInFailed = function () {
 
 const changePasswordSuccess = function (response) {
   console.log(response)
+  $('#class1-message').hide()
   $('#change-password').hide()
   $('#pra').hide()
   $('#class1-message').hide()
@@ -74,6 +75,7 @@ const changePasswordSuccess = function (response) {
 }
 
 const changePassWordFailed = function (error) {
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#class1-message').hide()
   $('#class2-message').show()
@@ -85,6 +87,7 @@ const changePassWordFailed = function (error) {
 const signOutSuccess = function () {
   store.user = null
   // $('#xs').hide()
+  $('#class1-message').show()
   $('#update-trip').hide()
   $('#pra').show()
   $('#class2-message').show()
@@ -112,6 +115,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailed = function (error) {
+  $('#class1-message').show()
   $('#pra').hide()
   $('#class1-message').text('Failed to sign out!')
   $('#class2').hide()

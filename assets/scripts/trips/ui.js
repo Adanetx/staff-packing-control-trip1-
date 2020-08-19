@@ -14,18 +14,21 @@ const showTripsSuccess = function (response) {
   $('#class2-message').text('seccessfully listed')
   $('#faillure-message').hide()
   $('#content').show()
+  $('#class1-message').hide()
   const showTripsText = showTripTemplate({ trips: response.trips })
   $('#content').html(showTripsText)
 }
 
 const showTripsFailed = function (error) {
   console.log(error)
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('Failed to show trips. Try again')
 }
 
 const createTripSuccess = function (response) {
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#content').show()
   $('#show-trips').show()
@@ -37,6 +40,8 @@ const createTripSuccess = function (response) {
 }
 
 const createTripFailed = function (error) {
+  console.log(error)
+  $('#class1-message').hide()
   $('#pra').hide()
   console.log(error)
   $('#show-trips').show()
@@ -46,6 +51,7 @@ const createTripFailed = function (error) {
 }
 
 const deleteTripSuccess = function () {
+  $('#class1-message').hie()
   $('#pra').hide()
   $('#content').hide()
   // $('#deleteSuccess').hide()
@@ -55,6 +61,7 @@ const deleteTripSuccess = function () {
 
 const deleteTripFailed = function (error) {
   console.log(error)
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('Failed to delete trip. Try again')
@@ -63,6 +70,7 @@ const deleteTripFailed = function (error) {
 const updateTripSuccess = function (response) {
   console.log(response)
   // $('#show-trips').show()
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#content').show()
 
@@ -72,6 +80,7 @@ const updateTripSuccess = function (response) {
 
 const updateTripFailed = function (error) {
   console.log(error)
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#update-trip').trigger('reset')
   $('#content').hide()
@@ -81,6 +90,7 @@ const updateTripFailed = function (error) {
 
 const showSingleTripSuccess = function (response) {
   console.log(response)
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#show-trip').trigger('reset')
   $('#content').show()
@@ -91,6 +101,7 @@ const showSingleTripSuccess = function (response) {
 
 const showSingleTripFailed = function (error) {
   console.log(error)
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#show-trip').trigger('reset')
   $('#class2-message').show()
