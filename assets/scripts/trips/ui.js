@@ -72,7 +72,7 @@ const updateTripSuccess = function (response) {
   // $('#show-trips').show()
   $('#class1-message').hide()
   $('#pra').hide()
-  $('#content').show()
+  $('#content').hide()
 
   $('#class2-message').text('Trip Successfully updated!')
   $('#update-trip').trigger('reset')
@@ -93,10 +93,10 @@ const showSingleTripSuccess = function (response) {
   $('#class1-message').hide()
   $('#pra').hide()
   $('#show-trip').trigger('reset')
-  $('#content').show()
   const showTripText = createTripTemplate({ trip: response.trip })
   $('#content').html(showTripText)
   $('#class2-message').text('Successfully showed sigle trip')
+  $('#content').show()
 }
 
 const showSingleTripFailed = function (error) {

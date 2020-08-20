@@ -38,7 +38,7 @@ const deleteTrip = function (tripId) {
 }
 
 const updateTrip = function (formData) {
-  console.log(store.user)
+  console.log(formData)
   const tripId = formData.trip._id
   return $.ajax({
     headers: {

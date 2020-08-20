@@ -22,12 +22,11 @@ nav {
 
 body {
   background-color: $body-bg-color;
+  $font-color: black;
+  font-family: monospace;
+  font-size: 16px;
 }
 
 h1 {
-  text-align: center;
-}
-
-box1 {
   text-align: center;
 }
