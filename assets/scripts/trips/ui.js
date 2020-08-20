@@ -51,7 +51,7 @@ const createTripFailed = function (error) {
 }
 
 const deleteTripSuccess = function () {
-  $('#class1-message').hie()
+  $('#class1-message').hide()
   $('#pra').hide()
   $('#content').hide()
   // $('#deleteSuccess').hide()

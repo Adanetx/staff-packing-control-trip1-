@@ -11,7 +11,7 @@ const signUpSuccess = function (response) {
   $('#class1-message').text('Sign Up Successful! Now sign in')
   // $('#sign-up-button').hide()
   // $('#class2-message').hide()
-  $('#sign-up').hide()
+  $('#sign-up').show()
   // $('#change-passwords-button').show()
   $('form').trigger('reset')
 }
