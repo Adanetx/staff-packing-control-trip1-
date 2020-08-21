@@ -28,6 +28,7 @@ const showTripsFailed = function (error) {
 }
 
 const createTripSuccess = function (response) {
+  console.log(response)
   $('#class1-message').hide()
   $('#pra').hide()
   $('#content').show()
@@ -51,6 +52,7 @@ const createTripFailed = function (error) {
 }
 
 const deleteTripSuccess = function () {
+  console.log(store.user)
   $('#class1-message').hide()
   $('#pra').hide()
   $('#content').hide()
