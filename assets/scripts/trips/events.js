@@ -53,7 +53,7 @@ const onShowCreatForm = function (event) {
   $('#create-trips').show()
   $('#update-trip').hide()
   $('#show-trip').hide()
-  $('#show-trips').hide()
+  $('#show-trips').show()
 }
 const onShowUpdateForm = function (event) {
   event.preventDefault()
