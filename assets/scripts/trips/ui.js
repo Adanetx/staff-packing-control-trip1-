@@ -9,6 +9,8 @@ const store = require('../store.js')
 const showTripsSuccess = function (response) {
   console.log('the response is', response)
   // store.user = response.user
+  $('#update-trip').hide()
+  $('#create-trips').hide()
   $('#pra').hide()
   $('#class2-message').show()
   $('#class2-message').text('seccessfully listed')
@@ -21,6 +23,8 @@ const showTripsSuccess = function (response) {
 
 const showTripsFailed = function (error) {
   console.log(error)
+  $('#update-trip').hide()
+  $('#create-trips').hide()
   $('#class1-message').hide()
   $('#pra').hide()
   $('#class2-message').show()
@@ -46,7 +50,7 @@ const createTripFailed = function (error) {
   $('#pra').hide()
   console.log(error)
   $('#show-trips').show()
-  $('#create-trip').trigger('reset')
+  $('#create-trips').trigger('reset')
   $('#class2-message').show()
   $('#class2-message').text('Failed to create trip. Try again')
 }
@@ -82,12 +86,15 @@ const updateTripSuccess = function (response) {
 
 const updateTripFailed = function (error) {
   console.log(error)
+  // $('#update-trip').hide()
+  $('#create-trip').hide()
   $('#class1-message').hide()
   $('#pra').hide()
   $('#update-trip').trigger('reset')
   $('#content').hide()
-  $('#class2-message').show()
-  $('#class2-message').text('Failed to update trip. Try again')
+  $('#class2-message').hide()
+  // $('#class2-message').text('Failed to update trip. Try again')
+  alert('update failed, try again')
 }
 
 const showSingleTripSuccess = function (response) {
@@ -106,8 +113,9 @@ const showSingleTripFailed = function (error) {
   $('#class1-message').hide()
   $('#pra').hide()
   $('#show-trip').trigger('reset')
-  $('#class2-message').show()
-  $('#class2-message').text('Could not show trip')
+  $('#class2-message').hide()
+  // $('#class2-message').text('Could not show trip')
+  alert('please enter the correct Id')
 }
 
 module.exports = {

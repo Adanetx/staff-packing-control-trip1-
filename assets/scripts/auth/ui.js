@@ -11,6 +11,7 @@ const signUpSuccess = function (response) {
   $('#class1-message').text('Sign Up Successful! Now sign in')
   // $('#sign-up-button').hide()
   // $('#class2-message').hide()
+  // alert('sign up seccessfully')
   $('#sign-up').show()
   // $('#change-passwords-button').show()
   $('form').trigger('reset')
@@ -18,8 +19,9 @@ const signUpSuccess = function (response) {
 
 const signUpFailed = function (error) {
   $('.sigle').hide()
-  $('#class1-mesage').show()
-  $('#class1-message').text('Failed to Sign Up')
+  $('#class1-mesage').hide()
+  // $('#class1-message').text('Failed to Sign Up')
+  alert('sign up failed')
   $('#sign-up-button').hide()
   console.log(error)
   $('form').trigger('reset')
@@ -41,6 +43,7 @@ const signInSuccess = function (response) {
   $('#content').hide()
   $('#class1-message').show()
   $('#class1-message').text('Sign In Successful!')
+  // alert('sign in seccessfully')
   // $('#class2').show()
   $('#class2-message').hide()
   $('form').trigger('reset')
@@ -50,8 +53,9 @@ const signInSuccess = function (response) {
 const signInFailed = function () {
   $('.sigle').hide()
   $('#second-button').show()
-  $('#class1-message').show()
-  $('#class1-message').text('Failed to Sign In')
+  $('#class1-message').hide()
+  // $('#class1-message').text('Failed to Sign In')
+  alert('failed to sign in')
 
   // console.log(error)
   $('form').trigger('reset')
@@ -65,13 +69,14 @@ const changePasswordSuccess = function (response) {
   $('#class1-message').hide()
   $('.shower').show()
   $('.opencreation').show()
-  $('#first-button').hide()
+  $('#first-button').show()
   // $('#content').show()
   $('#show-trip').hide()
   $('#create-trips').hide()
   $('#class2-message').show()
   $('form').trigger('reset')
-  $('#class2-message').text('You changed your password!')
+  $('#class2-message').hide()
+  alert('you changed your password')
 }
 
 const changePassWordFailed = function (error) {
@@ -79,7 +84,8 @@ const changePassWordFailed = function (error) {
   $('#pra').hide()
   $('#class1-message').hide()
   $('#class2-message').show()
-  $('#class2-message').text('change password fail!')
+  // $('#class2-message').text('change password fail!')
+  alert('change password fail, go head try again')
   console.log(error)
   $('form').trigger('reset')
 }
@@ -110,14 +116,16 @@ const signOutSuccess = function () {
   $('#first-button').hide()
   $('#class2-message').hide()
   // $('#class2').hide()
-  $('#class1-message').show()
-  $('#class1-message').text('You signed out')
+  $('#class1-message').hide()
+  // $('#class1-message').text('You signed out')
+  alert('you signed out')
 }
 
 const signOutFailed = function (error) {
   $('#class1-message').show()
   $('#pra').hide()
-  $('#class1-message').text('Failed to sign out!')
+  // $('#class1-message').text('Failed to sign out!')
+  alert('failed to signed out')
   $('#class2').hide()
   console.log(error)
 }
