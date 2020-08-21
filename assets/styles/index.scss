@@ -21,18 +21,33 @@ nav {
  }
 
 body {
+  align-items:  center;
   background-color: $body-bg-color;
   $font-color: black;
   font-family: monospace;
   font-size: 16px;
+  width: 80%;
 }
-
-h1 {
-  text-align: center;
-}
+//
+// p {
+//   text-align: center;
+// }
 
 button {
   font-family: fantasy;
   font-size: 10px;
 
+ }
+
+form {
+  align-items: center;
+}
+
+// .container {
+//   width: 80%;
+// }
+
+.container {
+  margin-left: 20%;
+  margin-right: 25%;
 }

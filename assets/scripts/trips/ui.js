@@ -74,7 +74,7 @@ const updateTripSuccess = function (response) {
   $('#pra').hide()
   $('#content').hide()
 
-  $('#class2-message').text('Trip Successfully updated!')
+  $('#class2-message').text('Trip Successfully updated `go head click show all button to see your update`!')
   $('#update-trip').trigger('reset')
 }
 
