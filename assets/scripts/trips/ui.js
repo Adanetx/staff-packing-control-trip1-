@@ -62,7 +62,8 @@ const deleteTripSuccess = function () {
   $('#content').hide()
   // $('#deleteSuccess').hide()
   $('#class2-message').show()
-  $('#class2-message').text('trip deleted')
+  $('#class2-message').hide()
+  alert('trip deleted you will not have this again in  in the database')
 }
 
 const deleteTripFailed = function (error) {
@@ -70,7 +71,9 @@ const deleteTripFailed = function (error) {
   $('#class1-message').hide()
   $('#pra').hide()
   $('#class2-message').show()
-  $('#class2-message').text('Failed to delete trip. Try again')
+  $('#content').show()
+  $('#class2-message').hide()
+  alert('failed to delete')
 }
 
 const updateTripSuccess = function (response) {

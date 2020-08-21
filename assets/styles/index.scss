@@ -25,7 +25,7 @@ body {
   background-color: $body-bg-color;
   $font-color: black;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 10px;
   width: 80%;
 }
 //
@@ -35,7 +35,7 @@ body {
 
 button {
   font-family: fantasy;
-  font-size: 10px;
+  font-size: 8px;
 
  }
 
@@ -47,7 +47,39 @@ form {
 //   width: 80%;
 // }
 
+
 .container {
-  margin-left: 20%;
+  margin-left: 15%;
   margin-right: 25%;
+  // width: 50%;
+}
+
+.c1 {
+  width: 60%;
+}
+
+.c2 {
+
+  width: 60%;
+}
+
+label {
+  padding-right: 20px;
+}
+
+.para {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.a1 {
+  font-family: serif;
+  font-size: 16px;
+}
+
+.a2 {
+  font-family: serif;
+
+  font-size: 16px;
+
 }
