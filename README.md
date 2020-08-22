@@ -78,4 +78,4 @@ the  the variables I need for now are
 - Identifing  how cost will be it to pack
 
 ## wireframe for the front end looks like below
-![wireframe](https://i.imgur.com/hyas0Uf.png)
+![wireframe](https://i.imgur.com/qw1vJco.png)
