@@ -54,18 +54,21 @@ const onShowCreatForm = function (event) {
   $('#update-trip').hide()
   $('#show-trip').hide()
   $('#show-trips').show()
+  $('#class1-message').hide()
 }
 const onShowUpdateForm = function (event) {
   event.preventDefault()
   $('#update-trip').show()
   $('#create-trips').hide()
   $('#show-trip').hide()
+  $('#class1-message').hide()
 }
 const onsingle = function (event) {
   event.preventDefault()
   $('#show-trip').show()
   $('#create-trips').hide()
   $('#update-trip').hide()
+  $('#class1-message').hide()
 }
 
 const addHandlers = () => {
