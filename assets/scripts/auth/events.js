@@ -46,6 +46,8 @@ const onSignOut = function (event) {
 const showChangePassword = function (event) {
   event.preventDefault()
   $('#change-password').show()
+  $('#class2-message').hide()
+  $('#class1-message').hide()
 }
 
 const onShowsignUp = function (event) {

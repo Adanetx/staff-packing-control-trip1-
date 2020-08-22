@@ -23,6 +23,7 @@ const showTripsSuccess = function (response) {
 
 const showTripsFailed = function (error) {
   console.log(error)
+  // ￼  $('#update-trip').hide()
   $('#update-trip').hide()
   $('#create-trips').hide()
   $('#class1-message').hide()

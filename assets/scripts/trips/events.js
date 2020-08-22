@@ -55,6 +55,7 @@ const onShowCreatForm = function (event) {
   $('#show-trip').hide()
   $('#show-trips').show()
   $('#class1-message').hide()
+  $('#class2-message').hide()
 }
 const onShowUpdateForm = function (event) {
   event.preventDefault()
@@ -62,6 +63,7 @@ const onShowUpdateForm = function (event) {
   $('#create-trips').hide()
   $('#show-trip').hide()
   $('#class1-message').hide()
+  $('#class2-message').hide()
 }
 const onsingle = function (event) {
   event.preventDefault()
@@ -69,6 +71,7 @@ const onsingle = function (event) {
   $('#create-trips').hide()
   $('#update-trip').hide()
   $('#class1-message').hide()
+  $('#class2-message').hide()
 }
 
 const addHandlers = () => {
