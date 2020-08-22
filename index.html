@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>trip control</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="container m-8 h-100">
+<nav>
+<form id="sign-out">
+<button class="signout  btn btn-danger m-2" type="submit">Sign Out</button>
+</form>
+<button id="first-button" class=" btn btn-info m-2">change-password</button>
+<button id="show-trips" class="index btn btn-info m-2" type="submit">show-all</button>
+</nav>
+
+<p id = "pra"class="para"> well come to staff packing trip control</p>
+
+<div id="class1 " class="c1">
+<!--Sign Up-->
+<button id="second-button"class="form-control mx-auto btn-info m-2" style="width:150px">Sign up</button>
+<form id="sign-up">
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input name="credentials[email]" type="text" placeholder="username"  class="form-control"/>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+
+              <input name="credentials[password]" type="password" placeholder="password" class="form-control"/>
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">confirm password</label>
+            <div class="col-sm-10">
+                <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" class="form-control" />
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+        </div>
+</form>
+<form id="sign-in">
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                  <input name="credentials[email]" type="text" placeholder="username"  class="form-control"/>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input name="credentials[password]" type="password" placeholder="password" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+</form>
+<p id="class1-message" class="a1"></p>
+
+</div>
+
+<!-- <p id="class2-message" class="a2"></p> -->
+
+ <form id="change-password">
+        <div class="form-group row">
+            <label for="old password" class="col-sm-2 col-form-label">old password</label>
+            <div class="col-sm-10">
+           <input name="passwords[old]" type="password" placeholder="old password" />
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="new password" class="col-sm-2 col-form-label">new password</label>
+            <div class="col-sm-10">
+              <input name="passwords[new]"  type="password" placeholder="new password" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">save-change</button>
+            </div>
+        </div>
+</form>
+
+ <!-- <form id="show-trips">
+ <button id="show-trips" class="index btn btn-info" type="submit">show-all</button>
+</form>  -->
+ <button type="button" class="btn btn-success opencreation m-1">create</button>
+ <button type="button" class="btn btn-success shower m-1">update</button>
+ <button type="button" class="btn btn-success single m-1">show-one</button>
+   <p id="class2-message" class="a2"></p>
+
+  <div id="xs" class="c2">
+
+   <form id="create-trips">
+               <p class="m-2"> enter all form data to create </p>
+        <div class="form-group row">
+            <label for="date" class="col-sm-2 col-form-label">date</label>
+            <div class="col-sm-10">
+                <input  name="trip[date]" type="Date" placeholder="date" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="driverName" class="col-sm-2 col-form-label">dirver name</label>
+            <div class="col-sm-10">
+           <input  name="trip[driverName]" type ="text" placeholder="driver name"class="form-control"/>
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="location" class="col-sm-2 col-form-label">location</label>
+            <div class="col-sm-10">
+         <input  name="trip[location]" type="text" placeholder="location" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="destinaton" class="col-sm-2 col-form-label">destination</label>
+            <div class="col-sm-10">
+         <input  name="trip[destination]" type="text" placeholder="destination" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+              <button type="submit" class="btn btn-info createTrip mb-1 mt-1 btn-change-password">create trip</button>
+            </div>
+        </div>
+</form>
+
+   <form id="update-trip">
+                  <p class="m-2"> enter all form datas to update and  you can re-enter the data that you do't want change. </p>
+    <div class="form-group row">
+      <label for="date" class="col-sm-2 col-form-label">trip Id</label>
+      <div class="col-sm-10">
+        <input  name="trip[_id]" type="text" placeholder="trip ID" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="date" class="col-sm-2 col-form-label">date</label>
+      <div class="col-sm-10">
+        <input  name="trip[date]" type="Date" placeholder="date" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="driverName" class="col-sm-2 col-form-label">driver name</label>
+      <div class="col-sm-10">
+        <input  name="trip[driverName]" type ="text" placeholder="driver name"class="form-control"/>
+
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="location" class="col-sm-2 col-form-label">location</label>
+      <div class="col-sm-10">
+        <input  name="trip[location]" type="text" placeholder="location" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="destinaton" class="col-sm-2 col-form-label">destination</label>
+      <div class="col-sm-10">
+        <input  name="trip[destination]" type="text" placeholder="destinaton" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-info createTrip mb-1 mt-1 btn-change-password">update</button>
+      </div>
+    </div>
+  </form>
+  <form id="show-trip">
+    <div class="form-group row">
+      <label for="trip id" class="col-sm-2 col-form-label">trip Id</label>
+      <div class="col-sm-10">
+        <input name="trip[_id]" type="text" placeholder="trip-Id" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button class="showTrip btn btn-info" type="submit">show</button>
+      </div>
+    </div>
+  </form>
+<div id="content" class="content"></div>
+<div id="deleteSuccess"></div>
+</div>
+</div>
+</body>
+</html>
