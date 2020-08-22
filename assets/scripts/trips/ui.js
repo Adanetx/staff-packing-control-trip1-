@@ -9,11 +9,12 @@ const store = require('../store.js')
 const showTripsSuccess = function (response) {
   console.log('the response is', response)
   // store.user = response.user
+  $('#show-trip').hide()
   $('#update-trip').hide()
   $('#create-trips').hide()
   $('#pra').hide()
   $('#class2-message').show()
-  $('#class2-message').text('seccessfully listed')
+  $('#class2-message').text('current data in the database, if you do not see it blow, no data.')
   $('#faillure-message').hide()
   $('#content').show()
   $('#class1-message').hide()
@@ -24,6 +25,7 @@ const showTripsSuccess = function (response) {
 const showTripsFailed = function (error) {
   console.log(error)
   // ￼  $('#update-trip').hide()
+  $('#show-trip').hide()
   $('#update-trip').hide()
   $('#create-trips').hide()
   $('#class1-message').hide()
@@ -60,15 +62,16 @@ const deleteTripSuccess = function () {
   console.log(store.user)
   $('#class1-message').hide()
   $('#pra').hide()
-  $('#content').hide()
-  // $('#deleteSuccess').hide()
-  $('#class2-message').show()
-  $('#class2-message').hide()
+  $('#show-trips').click()
+  // $('#class2-message').show()
+  // $('#class2-message').hide()
   alert('trip deleted you will not have this again in  in the database')
+  $('#content').show()
 }
 
 const deleteTripFailed = function (error) {
   console.log(error)
+  $('#show-trips').click()
   $('#class1-message').hide()
   $('#pra').hide()
   $('#class2-message').show()
@@ -82,10 +85,11 @@ const updateTripSuccess = function (response) {
   // $('#show-trips').show()
   $('#class1-message').hide()
   $('#pra').hide()
-  $('#content').hide()
-
-  $('#class2-message').text('Trip Successfully updated `go head click show all button to see your update`!')
+  // $('#content').hide()
+  // $('#class2-message').
+  alert('you have updated your trip information.')
   $('#update-trip').trigger('reset')
+  $('#show-trips').click()
 }
 
 const updateTripFailed = function (error) {
